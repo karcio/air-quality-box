@@ -11,3 +11,9 @@ sudo apt-get install pigpio python-pigpio python3-pigpio
 sudo apt-get install python3-pip
 sudo pip3 install RPLCD
 ```
+
+## Start application
+
+```
+python3 app-sensor.py 
+```
