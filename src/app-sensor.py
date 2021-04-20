@@ -9,9 +9,6 @@ lcd = CharLCD('PCF8574', 0x3f)
 now = '{:%Y%m%d-%H%M%S}'.format(datetime.datetime.now())
 file = 'readings_' + now + '.csv'
 
-#with open(file, 'a') as csvfile:
-#    filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
 while True:
     lcd.clear()
     pm25 = str(getPm25())

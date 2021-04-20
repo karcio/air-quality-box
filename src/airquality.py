@@ -6,19 +6,23 @@ logging.basicConfig(format=' %(levelname)s - %(asctime)s - %(message)s ', level=
  
 ser = serial.Serial('/dev/ttyUSB0')
  
-data = []
-for index in range(0,10):
-    datum = ser.read()
-    data.append(datum)
-
 def getPm25():
-    pmtwofive = int.from_bytes(b''.join(data[2:4]), byteorder='little') / 10
-    logging.info("PM 2.5:\t %s",pmtwofive)
+    data = []
+    for index in range(0,10):
+        datum = ser.read()
+        data.append(datum)
 
+        pmtwofive = int.from_bytes(b''.join(data[2:4]), byteorder='little') / 10
+        logging.info("PM 2.5:\t %s",pmtwofive)
     return pmtwofive
 
 def getPm10():
-    pmten = int.from_bytes(b''.join(data[4:6]), byteorder='little') / 10
-    logging.info("PM 10:\t %s",pmten)
+    data = []  
+    for index in range(0,10):
+        datum = ser.read()
+        data.append(datum)
+     
+        pmten = int.from_bytes(b''.join(data[4:6]), byteorder='little') / 10
+        logging.info("PM 10:\t %s",pmten)
 
     return pmten
