@@ -1,8 +1,9 @@
 # air-quality-box
 
 ## Pre-requirements
-1. enable GPIO
-2. install dependencies
+1. Raspberry PI 
+1. Enable GPIO in raspberry pi
+2. Install dependencies
 
 ```
 sudo apt-get install python3
@@ -14,12 +15,11 @@ sudo pip3 install adafruit-io
 ```
 
 ## Start application
-
 ```
 python3 app-sensor.py 
 ```
 
-## R graphs
+## R graphs - generate pdf from csv file
 
 ```
 library(ggplot2)
