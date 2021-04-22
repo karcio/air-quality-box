@@ -1,4 +1,4 @@
-# air-quality
+# air-quality-box
 
 ## Pre-requirements
 1. enable GPIO
