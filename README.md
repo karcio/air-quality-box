@@ -5,20 +5,20 @@
 1.  Raspberry PI
 2.  Enable GPIO in raspberry pi
 3.  Install dependencies
-
+```
     sudo apt-get install python3
     sudo apt-get install python3-distutils
     sudo apt-get install pigpio python-pigpio python3-pigpio
     sudo apt-get install python3-pip
     sudo pip3 install RPLCD
     sudo pip3 install adafruit-io
-
+```
 ## Start application
-
+```
     python3 app-sensor.py
-
+```
 ## R graphs - generate pdf from csv file
-
+```
     library(ggplot2)
     library("gridExtra")
 
@@ -30,3 +30,4 @@
     grid.arrange(p1, p2)
 
     dev.off()
+```
