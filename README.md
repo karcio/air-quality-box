@@ -6,7 +6,6 @@
 2.  Enable GPIO in raspberry pi
 3.  Install dependencies
 
-
     sudo apt-get install python3
     sudo apt-get install python3-distutils
     sudo apt-get install pigpio python-pigpio python3-pigpio
