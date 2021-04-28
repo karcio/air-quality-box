@@ -1,7 +1,7 @@
-import serial
-import time
-from Adafruit_IO import Client
 import logging
+import serial
+from Adafruit_IO import Client
+
 
 logging.basicConfig(
     format=' %(levelname)s - %(asctime)s - %(message)s ', level=logging.INFO)
@@ -14,7 +14,6 @@ def getPm25():
     for index in range(0, 10):
         datum = ser.read()
         data.append(datum)
-
         pmtwofive = int.from_bytes(
             b''.join(data[2:4]), byteorder='little') / 10
         logging.info("PM 2.5:\t %s", pmtwofive)
