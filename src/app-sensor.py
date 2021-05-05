@@ -15,14 +15,13 @@ with open(file, 'w') as csvfile:
     filewriter.writerow(["ts", "pm25", "pm10"])
     csvfile.close()
 
-lcd.clear()
-lcd.cursor_pos = (0, 4)
-lcd.write_string('AIR QUALITY')
-
 while True:
-    #lcd.clear()
+    lcd.clear()
     pm25 = str(getPm25())
     pm10 = str(getPm10())
+    
+    lcd.cursor_pos = (0, 4)
+    lcd.write_string('AIR QUALITY')
 
     lcd.cursor_pos = (2, 0)
     lcd.write_string('PM2.5: ')
@@ -42,4 +41,4 @@ while True:
         filewriter.writerow([ts, pm25, pm10])
         csvfile.close()
 
-    time.sleep(5)
+   time.sleep(5)
