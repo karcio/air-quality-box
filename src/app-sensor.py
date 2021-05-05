@@ -15,11 +15,12 @@ with open(file, 'w') as csvfile:
     filewriter.writerow(["ts", "pm25", "pm10"])
     csvfile.close()
 
+lcd.clear()
 lcd.cursor_pos = (0, 4)
 lcd.write_string('AIR QUALITY')
 
 while True:
-    lcd.clear()
+    #lcd.clear()
     pm25 = str(getPm25())
     pm10 = str(getPm10())
 
