@@ -41,4 +41,4 @@ while True:
         filewriter.writerow([ts, pm25, pm10])
         csvfile.close()
 
-   time.sleep(5)
+    time.sleep(5)
